@@ -1,0 +1,59 @@
+.modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.modal-header {
+    position: relative;
+    text-transform: capitalize;
+    background-color: $dark_blue;
+    color: $white;
+}
+
+.modal-header .close {
+    color: $white;
+    opacity: 1;
+}
+
+.modal-title {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-content {
+    border-radius: 2px;
+}
+
+.modal-footer {
+    padding-top: 0;
+}
+
+.modal-body {
+    .control-label {
+        text-transform: capitalize;
+        &.sentence {
+            text-transform: none;
+        }
+    }
+}

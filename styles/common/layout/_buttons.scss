@@ -1,0 +1,79 @@
+.btn {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    text-transform: capitalize;
+    transform-style: flat;
+    transition: all 500ms ease-out;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        box-shadow: none;
+        border: none;
+        transform-style: flat;
+        transition: all 250ms ease-out;
+    }
+}
+
+.side-btn {
+    background: transparent;
+    color: $white;
+    img {
+        @extend .icon-md;
+        margin-right: 5px;
+    }
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        background: transparent;
+        color: $white;     
+    } 
+}
+
+.blue-btn {
+    background: $light_blue;
+    color: $white;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        background: $lightblue_hov;
+        color: $white;     
+    } 
+}
+
+.cyan-btn {
+    background: $cyan;
+    color: $white;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        background: $cyan;
+        color: $white;     
+    } 
+}
+
+.gray-btn {
+    background: $dark_gray;
+    color: $white;
+    &:active,
+    &:focus,
+    &:hover,
+    &.btn-default:active,
+    &.btn-default:active:focus,
+    &.btn-default:active:hover {
+        background: $dark_gray;
+        color: $white;     
+    } 
+}

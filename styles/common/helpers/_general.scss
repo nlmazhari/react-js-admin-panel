@@ -1,0 +1,22 @@
+.container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 20px;
+    @include viewport(small) {
+        padding: 40px;  
+    }
+}
+
+.img-cover {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.back-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+}

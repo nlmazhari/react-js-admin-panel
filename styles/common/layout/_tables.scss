@@ -1,0 +1,100 @@
+//fixed header table on tbody scroll
+$table_width: 100%;
+$table_body_height: calc(100vh - 320px);
+
+.table {
+    width: $table_width;
+    table-layout: fixed;
+    border-collapse: collapse;
+    thead {
+        tr {
+            position: relative;
+            th {
+                border-bottom: 0;
+                background: $side_blue;
+                color: $white;
+                text-transform: capitalize;
+            }
+        }
+        .tr-lg {
+            display: none;
+            @include viewport(large) {
+                display: inline-table;
+            }
+        }
+
+        .tr-md {
+            display: flex;
+            @include viewport(large) {
+                display: none;
+            }
+        }
+    }
+    tr {
+        display: inline-table;
+        width: 100%;
+    }
+    tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        max-height: $table_body_height;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        td {
+            border-top: 0;
+            overflow-x: hidden;
+            word-break: break-word;
+            .td-flex {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                height: 60px;
+                overflow: hidden;
+                overflow-y: auto;
+            }
+        }
+    }
+    .btn + .btn {
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .table {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        overflow: auto;
+        thead, tbody {
+            width: 50%;
+        }
+        tbody {
+            overflow: unset;
+        }
+        tr {
+            display: flex;
+            flex-direction: column;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            th, td {
+                width: 100% !important;
+                min-height: 38px;
+                max-height: 38px;
+                text-align: left;
+            }
+        }
+        .btn {
+            padding: 0 5px;
+        }
+        .btn + .btn {
+            margin-left: 5px;
+        }
+    } 
+    .table > thead:first-child > tr:first-child > th {
+        border-top: 1px solid #ddd;
+    }
+}

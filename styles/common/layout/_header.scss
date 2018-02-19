@@ -1,0 +1,57 @@
+.header {
+    @include position-scale(fixed, 0, 0, auto, 0);
+    z-index: 2;
+    width: 100%;
+    height: 100px;
+    color: $white;
+    background: $header;
+    display: flex;
+    flex-direction: column;
+    .container {
+        height: 100px;
+    }
+    @include viewport(small) {
+        flex-direction: row;
+        left: 200px;
+        width: calc(100% - 200px);
+        height: 200px;
+        .container {
+            height: 200px;
+        }
+    }
+    @include viewport(large) {
+        left: 300px;
+        width: calc(100% - 300px);        
+    }
+    .wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .white-box {
+        background: $white;
+        width: 100%;
+        @include position-scale(absolute, auto, auto, 0, auto);  
+        @include viewport(small) {
+            @include position-scale(absolute, auto, auto, 20%, auto);  
+        }
+        ul {
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1em;
+            text-transform: capitalize;
+            @include viewport(small) {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        } 
+        li.active {
+            a {
+                color: $cyan;
+                box-shadow: 0px 5px 12px -6px $cyan;
+            }
+        }   
+    }
+}
